@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initialscale=1.0">
+    <title>Formulário de Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <form id="formulario" action="#" method="POST">
+        <h3>Cadastre-se </h3>
+        <div class="formgroup">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo...">
+        </div>
+        <div class="formgroup">
+            <label for="data_nascimento">Data de Nascimento: </label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+        </div>
+        <div class="formgroup">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="formgroup">
+            <label>Habilidades: </label>
+            <label for="html">
+                <input type="checkbox" id="html" name="habilidades" value="HTML">HTML
+            </label>
+            <label for="css">
+                <input type="checkbox" id="css" name="habilidades" value="CSS">CSS
+            </label>
+            <label for="js">
+                <input type="checkbox" id="js" name="habilidades" value="JS">JavaScript
+            </label>
+        </div>
+        <div class="formgroup">
+            <label for="pais">País: </label>
+            <select id="pais" name="pais">
+                <option value=""> </option>
+                <option value="br">Brasil </option>
+                <option value="ar">Argentina </option>
+                <option value="usa">Estados Unidos </option>
+                <option value="fr">França </option>
+                <option value="ch">China </option>
+            </select>
+        </div>
+        <div class="formgroup">
+            <label for="ingles">Nível de Inglês: </label>
+            <input type="radio" id="nivel_ingles" name="nivel_ingles" value="1"> Iniciante
+            <input type="radio" id="nivel_ingles" name="nivel_ingles" value="2"> Intermediário
+            <input type="radio" id="nivel_ingles" name="nivel_ingles" value="3"> Avançado
+        </div>
+        <div class="formgroup">
+            <label for="telefone">Telefone: </label>
+            <input type="text" id="telefone" name="telefone" placeholder="(13) 92904-5386">
+        </div>
+        <div class="formgroup">
+            <label for="comentarios">Comentários: </label>
+            <textarea id="comentarios" name="comentarios"> </textarea>
+        </div>
+        <div class="formgroup">
+            <button type="submit">Enviar </button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const dataNascimento = document.getElementById('data_nascimento').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const pais = document.getElementById('pais').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const comentarios = document.getElementById('comentarios').value.trim();
+
+            const habilidades = Array.from(document.querySelectorAll('input[name="habilidades"]:checked'))
+                .map(el => el.value);
+
+            const nivelInglesEl = document.querySelector('input[name="nivel_ingles"]:checked');
+            const nivelIngles = nivelInglesEl ? nivelInglesEl.value : '';
+
+            // Verifica se algum campo obrigatório está vazio
+            if (!nome || !dataNascimento || !email || !pais || !telefone || !comentarios || habilidades.length === 0 || !nivelIngles) {
+                alert("Insira todos os seus dados");
+                return;
+            }
+
+            const mensagem = `
+        Nome: ${nome}
+        Data de Nascimento: ${dataNascimento}
+        Email: ${email}
+        País: ${pais}
+        Telefone: ${telefone}
+        Comentários: ${comentarios}
+        Habilidades: ${habilidades.join(', ')}
+        Nível de Inglês: ${nivelIngles}
+      `;
+
+            alert("Dados recebidos com sucesso:\n\n" + mensagem);
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
