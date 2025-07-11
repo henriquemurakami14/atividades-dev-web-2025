@@ -108,6 +108,119 @@ menu a:hover {
 }
 
 .banner img {
-    height: 400px;
-    width: 100vw;
+    height: 500px;
+    width: 100%;
+}
+
+/* NOTICIAS */
+
+.noticias-competencias {
+    padding: 100px 0px;
+    background-image: linear-gradient(180deg, #000315 0%, #000825 100%);
+}
+
+.noticias-competencias .titulo {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 0px;
+}
+
+.noticias-competencias a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    padding: 20px 0px 20px 0px;
+}
+
+.noticias {
+    display: flex;
+    gap: 20px;
+}
+
+.noticias .noticia {
+    background-color: white;
+    flex: 1 1 24%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.noticia .imagem {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.noticia .imagem img {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.noticia .imagem:hover img{
+    scale: 1.1;
+}
+
+.noticia .data {
+    padding: 8px 0;
+    background-color: #00315EBD;
+    color: rgb(92, 160, 216);
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+
+    position: absolute;
+    z-index: 1;
+
+    transition: all 0.5s ease;
+    bottom: 0;
+}
+
+.noticia .imagem:hover .data {
+    bottom: -35px;
+}
+
+.noticia .post {
+    display: flex;
+    padding: 15px;
+}
+.noticia .post p {
+    color: #003C6A;
+}
+.noticia .botao {
+    color: #003C6A;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+}
+.noticia .botao a {
+    color: #003C6A;
+    text-decoration: none;
+    background-color: rgb(231, 228, 228);
+    padding: 10px;
+    border-radius: 25px;
+    transition: all 0.2 s ease;
+}
+
+.noticia .botao:hover a{
+    background-color: #003C6A;
+    color: rgb(231, 228, 228);
+}
+
+/* COMPETÊNCIAS */
+
+.competencias {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.competencias .competencia {
+    flex: 0 0 32%;
+}
+
+.competencia .imagem img {
+    width: 100%;
 }
