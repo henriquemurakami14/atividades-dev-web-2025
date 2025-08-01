@@ -201,7 +201,7 @@ menu a:hover {
     background-color: rgb(231, 228, 228);
     padding: 10px;
     border-radius: 25px;
-    transition: all 0.2 s ease;
+    transition: all 0.2s ease;
 }
 
 .noticia .botao:hover a{
@@ -218,9 +218,118 @@ menu a:hover {
 }
 
 .competencias .competencia {
+    position: relative;
     flex: 0 0 32%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .competencia .imagem img {
     width: 100%;
+    transition: all 1s ease;
 }
+
+.competencia:hover .imagem img {
+    scale: 1.2;
+}
+
+.competencia .titulo {
+    width: 80%;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+    bottom: 20px;
+    left: calc(50% - 40%);
+    text-align: center;
+}
+
+/* OPORTUNIDADES */
+
+.oportunidades {
+    padding: 100px 0px;
+}
+
+.oportunidades .titulo{
+    color: #003c6a;
+}
+
+.cards {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards .titulo{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card {
+    width: 24%;
+    height: 400px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card span {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 10px;
+    background-color: white;
+    display: flex;
+    font-size: 17px;
+    transition: all 0.5s ease;
+}
+
+span:hover {
+    scale: 1.1;
+}
+
+#cursos{
+    background-color: #FAB518;
+}
+
+#editais{
+    background-color: #009339;
+}
+
+#ecossistema{
+    background-color: #0082C4;
+}
+
+#seja-empregado{
+    background-color: #E40F1C;
+}
+
+#cursos span {
+    color: #FAB518;
+}
+
+#editais span {
+    color: #009339;
+}
+
+#ecossistema span {
+    color: #0082C4;
+}
+
+#seja-empregado span {
+    color: #E40F1C;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-image: linear-gradient(180deg, #00315E 0%, #001232 100%);
+    height: 400px;
+}
+
