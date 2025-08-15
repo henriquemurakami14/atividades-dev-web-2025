@@ -6,32 +6,8 @@
     padding: 0;
 }
 
-@media (max-width: 1200px) {
-    body {
-        background-color: var(-ametist-color);
-    }
-
-    .container {
-        width: 768px;
-    }
-
-    .card-container {
-        flex: 0 0 calc(33.33% - 13.33px);
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-color: var(-ametist-color);
-    }
-
-    .container {
-        width: 768px;
-    }
-
-    .card-container {
-        flex: 0 0 calc(33.33% - 13.33px);
-    }
+a {
+    color: black;
 }
 
 :root {
@@ -63,6 +39,10 @@ h3 {
     padding: 15px;
 }
 
+.main-container {
+    height: calc(100vh - 100px);
+}
+
 .menu ul {
     margin: 20px 10px 10px 10px;
     display: flex;
@@ -76,12 +56,10 @@ h3 {
 .menu-responsivo {
     padding: 10px;
     font-size: 32px;
-    /* realizar atividade */
     display: none
 }
 
 .cards {
-    /* realizar atividade */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,7 +68,6 @@ h3 {
 }
 
 .card-container {
-    /* realizar atividade */
     flex: 0 0 calc(25% - 15px);
     border: solid 1px;
 }
@@ -98,12 +75,85 @@ h3 {
 .card {
 
     max-width: 100%;
-    min-height: 200px;
+    height: 200px;
+    overflow: hidden;
 
     text-align: center;
-    line-height: 150px;
 
     background: var(--tea-leaf);
     color: #fff;
 
+    display: flex;
+    justify-content: center;
+
+}
+
+.card img {
+
+    width: 100%;
+    /* height: 100%; */
+
+}
+
+.card-container h1 {
+   font-weight: bold;
+   text-align: center;
+   padding: 5px 0px 0px 0px;
+   font-size: 25px;
+}
+
+.card-container p {
+   font-weight: bold;
+   text-align: center;
+   padding: 10px;
+}
+
+@media (max-width: 1200px) and (min-width:768px) {
+    body {
+        background-color: var(--ametist-color);
+    }
+
+    .container {
+        width: 768px;
+    }
+
+    .card-container {
+        flex: 0 0 calc(33.33% - 13.33px);
+    }
+}
+
+@media (max-width: 768px) and (min-width:576px) {
+    body {
+        background-color: var(--sunflower-color);
+    }
+
+    .container {
+        width: 576px;
+    }
+
+    .card-container {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        background-color: var(--carrot-color);
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .card-container {
+        flex: 0 0 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-responsivo {
+        display: block;
+    }
 }
