@@ -326,10 +326,128 @@ span:hover {
     color: #E40F1C;
 }
 
-/* RODAPÉ */
-
 footer {
     background-image: linear-gradient(180deg, #00315E 0%, #001232 100%);
     height: 400px;
 }
 
+.rodape {
+    height: 100%;
+    background-image: linear-gradient(180deg, #00315e 0%, #000825 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rodape .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 80px;
+    gap: 50px;
+}
+
+.rodape-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rodape-1 img {
+    height: 50px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.rodape-1 ul {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rodape-1 li i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0082C4;
+    color: #00315E;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+
+.rodape-1 li i:hover {
+    background-color: #00315E;
+    color: #0082C4;
+    border: solid 0.5px #0082C4;
+}
+
+.rodape-1 p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.rodape-1 a {
+    text-decoration: none;
+}
+
+.rodape-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.rodape-2 .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.rodape-2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rodape-2 ul li {
+    list-style: none;
+}
+
+.rodape-2 a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.rodape-2 a:hover {
+    color: #005F92;
+}
+
+.rodape .botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #0082C4 0%, #005F92 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-style: italic;
+}
+
+.rodape .botao:hover {
+    background: linear-gradient(180deg, #005F92 0%, #003E66 100%);
+}
