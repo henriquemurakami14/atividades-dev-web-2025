@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<style>
+    
+    img {
+        width: 300px;
+    }
+
+</style>
+<body>
+    
+    <h1>Hello World!</h1>
+
+    <button onclick="novaFuncionalidade()">Clique Aqui</button>
+
+    <div class="texto"></div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sunt ducimus nesciunt consequatur assumenda minima nam? Veniam exercitationem non cumque quae id distinctio quibusdam asperiores maxime tempora nobis, eveniet eos.</p>
+    
+    <p id="paragrafo" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vel, aliquam amet magni tempora atque aut exercitationem ipsa velit nesciunt unde dicta odio ab neque quo repudiandae, provident animi natus?</p>
+    
+    
+    <img onmouseenter="porcoFalando()" onmouseleave="porcoQuieto()" onclick="porcoDor()" ondrag="porcoDrag()" src="img/image.png" alt="">
+
+    <h2 class="porcoFala"></h2>
+
+    <script>
+
+        let elementos = document.getElementsByTagName('p')
+
+        elementos[0].innerText = "Novo texto!"
+
+        let paragrafos = document.getElementById("paragrafo")
+        paragrafos.innerText = "Olá Mundo!"
+
+
+        function novaFuncionalidade(){
+            let titulo = document.querySelector('h1')
+            titulo.innerText = "Seu titulo foi hackeado"
+            titulo.style.color = 'red'
+
+        }
+        
+        function porcoFalando(){
+            let fala = document.querySelector('h2')
+            fala.innerText = "Ronc Ronc"
+        }
+
+        function porcoQuieto(){
+            let fala = document.querySelector('h2')
+            fala.innerText = ""
+        }
+
+        function porcoDor() {
+            let fala = document.querySelector('h2')
+            fala.innerText = "Minha barriga tá doendo"
+        }
+
+        function porcoDrag() {
+            let fala = document.querySelector('h2')
+            fala.innerText = "Paraaaaaaaa"
+        }
+
+    </script>
+</body>
+</html>
