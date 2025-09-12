@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <button>Funções anonimas</button>
+
+    <div class="mostrador"></div>
+
+    <form action="#">
+        <input type="text" id="campoSabor" placeholder="Digite...">
+    </form>
+
+    <script>
+        let campoSabor = document.querySelector("#campoSabor")
+
+        campoSabor.addEventListener("input", () => {
+            if (campoSabor.value == "chocolate") {
+                campoSabor.value = "Eu amo sorvete de chocolate"
+            }
+        })
+
+        let most = document.querySelector(".mostrador");
+        document.addEventListener("keydown", (e) => {
+            most.innerHTML = "Meu nome é Henrique Akira Murakami" + e.key
+        })
+
+        document.addEventListener("click", () => {
+            let bgColor = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+            document.body.style.backgroundColor = bgColor;
+        })
+
+        let botao = document.querySelector("button");
+        botao.onclick = function () {
+            alert("Olhe o código para aprender a usar as funções anônimas.");
+        }
+
+    </script>
+</body>
+
+
+</html>
