@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Contagem regressiva</h2>
+
+    <span class="contador">???</span>
+
+    <script>
+
+        let contador = document.querySelector(".contador")
+        let regressiva = 3
+
+        let intervalo = setInterval(() => {
+
+            contador.innerText = regressiva
+
+            regressiva--
+
+            if (regressiva == -1) {
+                contador.innerText = "FELIZ ANO NOVO!"
+                clearInterval(intervalo)
+            }
+
+        }, 1000)
+
+
+        let idade = 16
+
+        localStorage.setItem("nome", "Gabriel")
+        localStorage.setItem("idade", idade)
+
+        let jogador = {
+            "nome": "Henrique Murakami",
+            "idade": 16,
+            "status": "nenhum"
+        }
+
+        localStorage.setItem("jogador", JSON.stringify(jogador))
+
+    </script>
+
+</body>
+
+</html>

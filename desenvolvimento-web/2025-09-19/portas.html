@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Titulo</h1>
+
+    <button class="AlterarModo" >Ativar Modo Claro/Escuro</button>
+
+    <script>
+
+        let botao = document.querySelector(".AlterarModo")
+        let body = document.querySelector("body")
+        
+        let modo = localStorage.getItem("modo")
+
+        if (modo == "tema-escuro") {
+            body.classList.add("tema-escuro")
+        }
+
+        botao.addEventListener('click', ()=>{
+            body.classList.toggle('tema-escuro')
+
+            let isTemaEscuro = body.classList.contains("tema-escuro")
+
+            if (isTemaEscuro) {
+                localStorage.setItem("modo", "tema-escuro")
+            }else{
+                localStorage.setItem("modo", "")
+            }
+
+        });
+
+        
+
+    </script>
+
+
+
+</body>
+</html>
