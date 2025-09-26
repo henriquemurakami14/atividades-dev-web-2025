@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>O texto é grande, como Alexandre!</h1>
+
+    <button onclick="trocarFontSize()">Troque o tamanho do h1</button>
+    
+    <script>
+
+        let titulo = document.querySelector("h1")
+
+        function trocarFontSize() {
+
+            let num = Math.floor(30 + (Math.random() * 70))
+
+            titulo.style.fontSize = num + "px"
+
+        }
+
+    </script>
+
+</body>
+</html>
