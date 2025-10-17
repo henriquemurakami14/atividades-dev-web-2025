@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+
+        <p id="messagemErro"></p>
+
+        <div class="form-group">
+
+            <label for="">nome</label>
+            <input type="text" id="nome">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="">email</label>
+            <input type="text" id="email">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="">senha</label>
+            <input type="password" id="senha">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="">confirmação de senha</label>
+            <input type="password" id="confirmaçãoSenha">
+
+        </div>
+
+        <div class="form-group">
+
+            <button type="submit">enviar</button>
+
+        </div>
+
+    </form>
+
+    <script>
+
+        let formulario = document.querySelector("form")
+
+
+        let messagemErro = document.querySelector("#messagemErro")
+
+        formulario.addEventListener("submit", (evento) => {
+            
+            let nome = document.querySelector("#nome").value
+            let email = document.querySelector("#email").value
+            let senha = document.querySelector("#senha").value
+            let confirmaçãoSenha = document.querySelector("#confirmaçãoSenha").value
+            // evita que o form seja enviado até que todos os campos sejam válidos
+            evento.preventDefault()
+
+            if (nome.length < 3) {
+                messagemErro.innerText = "O nome precisa ter ao menos 3 caracteres"
+                return
+            }
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailRegex.test(email)) {
+                messagemErro.innerText = "O email inválido"
+                return
+            }
+
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+            if (!senhaRegex.test(senha)) {
+                messagemErro.innerText = "A senha não pode ter menos que 8 caracteres e deve conter pelo menos uma letra maiúscula, um número e um caractere especial"
+                return
+            }
+
+            if (senha != confirmaçãoSenha) {
+                messagemErro.innerText = "Senha diferente"
+                return
+            }
+
+            formulario.reset()
+
+            formulario.submit()
+
+        })
+
+    </script>
+
+</body>
+
+</html>

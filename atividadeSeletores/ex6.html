@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Atividade 6</h1>
+
+    <p class="nomeAleatorio"></p>
+
+    <button class="gerador">gerar</button>
+
+    <script>
+        
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+
+        let nome = document.querySelector(".nomeAleatorio")
+        let botao = document.querySelector(".gerador")
+
+
+        
+
+        botao.addEventListener("click", ()=>{
+
+            let title = titles[Math.floor(Math.random() * 6)]
+            let name = names[Math.floor(Math.random() * 6)]
+            let classe = classes[Math.floor(Math.random() * 6)]
+            let location = locations[Math.floor(Math.random() * 6)]
+
+            let apresentacao = title + " " + name + ", " + classe + " de " + location
+
+            nome.innerText = apresentacao
+
+        })
+
+    </script>
+
+</body>
+
+</html>

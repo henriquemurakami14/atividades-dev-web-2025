@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Pokemon</h1>
+
+    <ul class="pokemons">
+
+        <li>Pikachu</li>
+
+    </ul>
+
+    <button>Adicionar</button>
+
+    <script>
+
+        let lista = document.querySelector(".pokemons")
+        let addButton = document.querySelector("button")
+
+        addButton.addEventListener('click', ()=>{
+            let pokemon = prompt("Informe seu pokemon: ")
+
+            let itemLista = document.createElement('li')
+            itemLista.innerText = pokemon
+
+            lista.appendChild(itemLista)
+
+        }
+        )
+
+
+
+    </script>
+
+</body>
+</html>
